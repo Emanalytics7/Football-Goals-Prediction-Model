@@ -1,5 +1,5 @@
 
-# 30 Days ML Challenge (Beak Data)
+# 30 Days ML Challenge (Beakinto Data)
 ---
 # Football Goals Prediction Model
 
