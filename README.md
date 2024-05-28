@@ -34,14 +34,17 @@ The preprocessing stage involves reading the collected data, normalizing team an
 
 ### Flow Chart
 ```mermaid
-graph TD;
-    A[Load Data] --> B[Normalize Team Names]
-    B --> C[Normalize Player Names]
-    C --> D[Fix Player List]
-    D --> E[Map Players to Teams]
-    E --> F[Assign Players to Matches]
-    F --> G[Normalize Player Names in Matches]
-    G --> H[Assign Player Ratings]
+graph TD
+  A[clubs_team_players_v1.csv] --> B[team_to_players mapping]
+  C[national_team_players_v1.csv] --> B
+  B --> D[matches_v1.json]
+
+  D --> E[matches_with_players.json]
+
+  F[players_rating_v1.csv] --> G[name to rating mapping]
+  
+  E --> H[football_matches_dataset_v1.json]
+  G --> H
 ```
 
 # Data Cleaning Strategy
