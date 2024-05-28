@@ -115,6 +115,7 @@ The base URL for accessing the API is:
   - `away_team`: Name of the away team (string, required)
   
   #### **Example Request**:
+  Using `curl` command
   ```sh
   curl "http://footballgoalspredictionapi.f6cpcjeweuhgacfm.eastus.azurecontainer.io/predict?home_team=Ac%20Milan&away_team=atalanta%20bc"
   ```
@@ -127,11 +128,6 @@ The base URL for accessing the API is:
       "predicted_home_goals": 4,
       "predicted_away_goals": 3
   }
-  ```
-  
-  - **Using curl command***
-  ```sh
-  curl "http://footballgoalspredictionapi.f6cpcjeweuhgacfm.eastus.azurecontainer.io/predict?home_team=Ac%20Milan&away_team=atalanta%20bc"
   ```
   
   - **Using Python `requests` lib**
