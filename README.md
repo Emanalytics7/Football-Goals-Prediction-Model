@@ -114,11 +114,11 @@ The base URL for accessing the API is:
 - `home_team`: Name of the home team (string, required)
 - `away_team`: Name of the away team (string, required)
 
-**Example Request**:
+#### **Example Request**:
 ```sh
 curl "http://footballgoalspredictionapi.f6cpcjeweuhgacfm.eastus.azurecontainer.io/predict?home_team=Ac%20Milan&away_team=atalanta%20bc"
 ```
-**Example Response:**
+#### **Example Response:**
 
 ```json
 {
@@ -129,12 +129,12 @@ curl "http://footballgoalspredictionapi.f6cpcjeweuhgacfm.eastus.azurecontainer.i
 }
 ```
 
-**Using curl command***
+- **Using curl command***
 ```sh
 curl "http://footballgoalspredictionapi.f6cpcjeweuhgacfm.eastus.azurecontainer.io/predict?home_team=Ac%20Milan&away_team=atalanta%20bc"
 ```
 
-**Using Python `requests` lib**
+- **Using Python `requests` lib**
 ```python
 import requests
 
@@ -148,7 +148,7 @@ print(response.json())
 
 ```
 
-**Using JavaScript `fetch` API**
+- **Using JavaScript `fetch` API**
 ```javascript
 fetch('http://footballgoalspredictionapi.f6cpcjeweuhgacfm.eastus.azurecontainer.io/predict?home_team=Ac%20Milan&away_team=atalanta%20bc')
   .then(response => response.json())
@@ -156,7 +156,7 @@ fetch('http://footballgoalspredictionapi.f6cpcjeweuhgacfm.eastus.azurecontainer.
   .catch(error => console.error('Error:', error));
 ```
 
-**Using Java `HttpClient`**
+- **Using Java `HttpClient`**
 ```java
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
