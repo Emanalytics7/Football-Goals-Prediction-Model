@@ -1,3 +1,6 @@
+
+# 30 Days ML Challenge (Beak Data)
+---
 # Football Goals Prediction Model
 
 ## Overview
@@ -81,16 +84,6 @@ The data cleaning stage involves handling missing values and ensuring the integr
 
 ## 06. API Development with Flask
 An API is developed using Flask to serve the model predictions. The API allows users to input both teams name and receive predicted scores.
-```python
- output:
-{
-    'away_team': 'atalanta bc',
-    'home_team': 'Ac Milan',
-    'predicted_away_goals': 3,
-    'predicted_home_goals': 4
-}
-
-```
 
 ## 07. Dockerization
 The application is containerized using Docker to ensure consistency across different environments. A Dockerfile is created to define the environment and dependencies.
@@ -98,5 +91,89 @@ The application is containerized using Docker to ensure consistency across diffe
 ## 08. Deployment on Azure
 The Docker container is deployed on Azure, making the model accessible as an api. Azure provides scalability and reliability for the deployed model.
 
----
 
+# Final Results (API USAGE)
+# Football Goals Prediction API
+
+The Football Goals Prediction API provides predictions for football goals based on various data inputs. Below are the details on how to use the API.
+
+## Base URL
+The base URL for accessing the API is:
+`http://footballgoalspredictionapi.f6cpcjeweuhgacfm.eastus.azurecontainer.io`
+
+## Endpoints
+
+### 1. Get Prediction
+**Endpoint**: `/predict`
+
+**Method**: `GET`
+
+**Description**: This endpoint provides a prediction for football goals based on the provided query parameters.
+
+**Query Parameters**:
+- `home_team`: Name of the home team (string, required)
+- `away_team`: Name of the away team (string, required)
+
+**Example Request**:
+```sh
+curl "http://footballgoalspredictionapi.f6cpcjeweuhgacfm.eastus.azurecontainer.io/predict?home_team=Ac%20Milan&away_team=atalanta%20bc"
+```
+**Example Response:**
+
+```json
+{
+    "home_team": "Ac Milan",
+    "away_team": "atalanta bc",
+    "predicted_home_goals": 4,
+    "predicted_away_goals": 3
+}
+```
+
+**Using curl command***
+```sh
+curl "http://footballgoalspredictionapi.f6cpcjeweuhgacfm.eastus.azurecontainer.io/predict?home_team=Ac%20Milan&away_team=atalanta%20bc"
+```
+
+**Using Python `requests` lib**
+```python
+import requests
+
+url = "http://footballgoalspredictionapi.f6cpcjeweuhgacfm.eastus.azurecontainer.io/predict"
+params = {
+    "home_team": "Ac Milan",
+    "away_team": "atalanta bc"
+}
+response = requests.get(url, params=params)
+print(response.json())
+
+```
+
+**Using JavaScript `fetch` API**
+```javascript
+fetch('http://footballgoalspredictionapi.f6cpcjeweuhgacfm.eastus.azurecontainer.io/predict?home_team=Ac%20Milan&away_team=atalanta%20bc')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+```
+
+**Using Java `HttpClient`**
+```java
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.net.URI;
+
+public class ApiClient {
+    public static void main(String[] args) throws Exception {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("http://footballgoalspredictionapi.f6cpcjeweuhgacfm.eastus.azurecontainer.io/predict?home_team=Ac%20Milan&away_team=atalanta%20bc"))
+                .build();
+
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        System.out.println(response.body());
+    }
+}
+```
+
+---
