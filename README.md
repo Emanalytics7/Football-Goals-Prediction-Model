@@ -15,7 +15,7 @@ This project focuses on building a predictive model to forecast the number of go
 7. [Dockerization](#dockerization)
 8. [Deployment on Azure](#deployment-on-azure)
 
-## Data Collection
+## 01. Data Collection
 
 ### Source
 Data was collected using Scrapy from [Transfermarkt](https://www.transfermarkt.com/).
@@ -27,12 +27,12 @@ The following datasets were collected:
 - `matches_v1.json`
 - `players_rating_v1.csv`
 
-## Preprocessing
+## 02. Preprocessing
 
 ### Summary
 The preprocessing stage involves reading the collected data, normalizing team and player names, and mapping players to their respective teams. This step ensures consistency and prepares the data for further analysis.
 
-### Flow Chart
+### How is the process of Mapping conducted
 ```mermaid
 graph TD
   A[clubs_team_players_v1.csv] --> B[team_to_players mapping]
@@ -47,44 +47,40 @@ graph TD
   G --> H
 ```
 
-# Data Cleaning Strategy
+# 03. Data Cleaning Strategy
 The data cleaning stage involves handling missing values and ensuring the integrity of the data. This includes:
 
 - Handling missing values by imputing the mean rating for missing player ratings.
-- Ensuring all necessary fields are populated and correctly formatted.
 
-# Exploratory Data Analysis (EDA)
+# 04. Exploratory Data Analysis (EDA)
 
-| Top 10 Teams with the Most Players | Number of Home vs. Away Players |
+| Top 10 Teams with the Most Players |Home Team vs. Away Team Average Rating |
 |:---------------------------------:|:------------------------------:|
-| ![Top 10 Teams with the Most Players](file-7Bh7sJdcttJ2tTmg0dIkcHLc) | ![Number of Home vs. Away Players](file-EEjJ4J1CwsmawoNFbYmsC9Od) |
+| ![Top 10 Teams with the Most Players](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/visuals/top_10.png)| ![Number of Home vs. Away Players](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/visuals/avg_ratings.png) |
 
-| Top 10 Players by Frequency of Appearances | Distribution of Home Team Scores |
+| Top 10 Players by Frequency of Appearances | Home Team vs Away Team Scores |
 |:-----------------------------------------:|:---------------------------------:|
-| ![Top 10 Players by Frequency of Appearances](file-H38aSSPCMpTM7av1jEGbGFES) | ![Distribution of Home Team Scores](file-fUJLmbdXgBoEkzkaer9Yr6lA) |
-
-| Distribution of Away Team Scores | Distribution of Home Team Average Ratings |
-|:-------------------------------:|:------------------------------------------:|
-| ![Distribution of Away Team Scores](file-VnmpXlimdLcPLuIED55Z5K6F) | ![Distribution of Home Team Average Ratings](file-1LfOP0jk1JrspsVTZd4xErVs) |
+| ![Top 10 Players by Frequency of Appearances](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/visuals/frequency.png) | ![Home Team Scores vs Away Team Scores](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/visuals/score.png) 
 
 | Home Team Score vs. Home Team Average Rating | Away Team Score vs. Away Team Average Rating |
 |:-------------------------------------------:|:-------------------------------------------:|
-| ![Home Team Score vs. Home Team Average Rating](file-USd36aqgS72AjymTO4eVhwjh) | ![Away Team Score vs. Away Team Average Rating](file-1LfOP0jk1JrspsVTZd4xErVs) |
+| ![Home Team Score vs. Home Team Average Rating](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/visuals/home_avg_ratings.png) | ![Away Team Score vs. Away Team Average Rating](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/visuals/away_avg_ratings.png) |
 
-# Model Training
-The model training stage involves splitting the data into training and testing sets, selecting a model, and optimizing its hyperparameters.
+| Number of Home vs Away Team Players |
+|:-------------------------------:|
+| ![Distribution of Away Team Scores](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/visuals/teams_players.png)
 
-## Summary
+# 05. Model Training
 - The dataset is split into training and testing sets.
 - A `RandomForestRegressor` is used for prediction.
 - Hyperparameters are optimized using `RandomizedSearchCV`.
 
-# API Development with Flask
-An API is developed using Flask to serve the model predictions. The API allows users to input match details and receive predicted scores.
+# 06. API Development with Flask
+An API is developed using Flask to serve the model predictions. The API allows users to input both teams name and receive predicted scores.
 
-# Dockerization
+# 07. Dockerization
 The application is containerized using Docker to ensure consistency across different environments. A Dockerfile is created to define the environment and dependencies.
 
-# Deployment on Azure
-The Docker container is deployed on Azure, making the model accessible as a web service. Azure provides scalability and reliability for the deployed model.
+# 08. Deployment on Azure
+The Docker container is deployed on Azure, making the model accessible as an api. Azure provides scalability and reliability for the deployed model.
 
