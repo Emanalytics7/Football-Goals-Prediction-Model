@@ -29,7 +29,6 @@ The following datasets were collected:
 
 ## 02. Preprocessing
 
-### Summary
 The preprocessing stage involves reading the collected data, normalizing team and player names, and mapping players to their respective teams. This step ensures consistency and prepares the data for further analysis.
 
 ### How is the process of Mapping conducted
@@ -47,7 +46,7 @@ graph TD
   G --> H
 ```
 
-# 03. Data Cleaning Strategy
+## 03. Data Cleaning Strategy
 The data cleaning stage involves handling missing values and ensuring the integrity of the data. This includes:
 
 - Handling missing values by imputing the mean rating for missing player ratings.
@@ -70,17 +69,34 @@ The data cleaning stage involves handling missing values and ensuring the integr
 |:-------------------------------:|
 | ![Distribution of Away Team Scores](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/visuals/teams_players.png)
 
-# 05. Model Training
-- The dataset is split into training and testing sets.
-- A `RandomForestRegressor` is used for prediction.
-- Hyperparameters are optimized using `RandomizedSearchCV`.
+## 05. Model Training
+- We use a `RandomForestRegressor` for prediction due to its robustness and ability to handle multiple output variables efficiently when wrapped in a `MultiOutputRegressor`.
+- Hyperparameters are optimized using RandomizedSearchCV with a predefined parameter distribution and cross-validation
+- 
+### Model Evaluation
+  The model is evaluated using several metrics:
+- Mean Absolute Error (MAE): `1.14`
+- Mean Squared Error (MSE): `2.4`
+- Root Mean Squared Error (RMSE): `1.5`
 
-# 06. API Development with Flask
+## 06. API Development with Flask
 An API is developed using Flask to serve the model predictions. The API allows users to input both teams name and receive predicted scores.
+```python
+ output:
+{
+    'away_team': 'atalanta bc',
+    'home_team': 'Ac Milan',
+    'predicted_away_goals': 3,
+    'predicted_home_goals': 4
+}
 
-# 07. Dockerization
+```
+
+## 07. Dockerization
 The application is containerized using Docker to ensure consistency across different environments. A Dockerfile is created to define the environment and dependencies.
 
-# 08. Deployment on Azure
+## 08. Deployment on Azure
 The Docker container is deployed on Azure, making the model accessible as an api. Azure provides scalability and reliability for the deployed model.
+
+---
 
