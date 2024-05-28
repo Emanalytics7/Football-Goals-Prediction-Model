@@ -106,7 +106,7 @@ The base URL for accessing the API is:
 ### 1. Get Prediction
   **Endpoint**: `/predict`
   
-  **Method**: `GET`
+  **Method**: `POST`
   
   **Description**: This endpoint provides a prediction for football goals based on the provided query parameters.
   
@@ -139,7 +139,7 @@ The base URL for accessing the API is:
       "home_team": "Ac Milan",
       "away_team": "atalanta bc"
   }
-  response = requests.get(url, params=params)
+  response = requests.post(url, params=params)
   print(response.json())
   
   ```
