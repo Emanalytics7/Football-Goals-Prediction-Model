@@ -22,3 +22,5 @@ print(response.json())
 }
 
 """
+#docker tag football-goals-api <your_registry_name>.azurecr.io/football-goals-api:latest
+#docker push <your_registry_name>.azurecr.io/football-goals-api:latest
