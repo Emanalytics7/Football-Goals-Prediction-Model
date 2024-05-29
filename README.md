@@ -70,7 +70,7 @@ The data cleaning stage involves handling missing values and ensuring the integr
 
 | Number of Home vs Away Team Players |
 |:-------------------------------:|
-| ![Distribution of Away Team Scores](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/visuals/teams_players.png)
+| ![Distribution of Away Team Scores](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/eda/teams_players.png)
 
 ## 05. Model Training
 - We use a `RandomForestRegressor` for prediction due to its robustness and ability to handle multiple output variables efficiently when wrapped in a `MultiOutputRegressor`.
