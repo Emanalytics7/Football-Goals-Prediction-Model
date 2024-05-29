@@ -54,7 +54,7 @@ The data cleaning stage involves handling missing values and ensuring the integr
 
 - Handling missing values by imputing the mean rating for missing player ratings.
 
-# 04. Exploratory Data Analysis (EDA)
+## 04. Exploratory Data Analysis (EDA)
 
 | Top 10 Teams with the Most Players |Home Team vs. Away Team Average Rating |
 |:---------------------------------:|:------------------------------:|
