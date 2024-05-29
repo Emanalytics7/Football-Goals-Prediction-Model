@@ -49,7 +49,7 @@ graph TD
   G --> H
 ```
 
-## 03. Data Cleaning Strategy
+## 03. Data Cleaning 
 The data cleaning stage involves handling missing values and ensuring the integrity of the data. This includes:
 
 - Handling missing values by imputing the mean rating for missing player ratings.
