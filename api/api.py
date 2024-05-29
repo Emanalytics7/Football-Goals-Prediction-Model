@@ -2,11 +2,17 @@ from flask import Flask, request, jsonify
 import pandas as pd
 from unidecode import unidecode
 import joblib
+import os
 
 app = Flask(__name__)
 
-model = joblib.load('football_goals_prediction_model.pkl')
-team_ratings = pd.read_csv('team_avg_ratings.csv')
+current_dir = os.path.dirname(__file__)
+
+model_path = os.path.join(current_dir, 'football_goals_prediction_model.pkl')
+model = joblib.load(model_path)
+
+csv_path = os.path.join(current_dir, 'team_avg_ratings.csv')
+team_ratings = pd.read_csv(csv_path)
 
 def get_team_rating(team_name, role="home"):
     if role == "home":
