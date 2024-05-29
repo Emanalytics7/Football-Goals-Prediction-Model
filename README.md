@@ -117,9 +117,7 @@ The base URL for accessing the API is:
   #### **Example Request**:
   Using `curl` command
   ```sh
-  curl "http:/import requests
-
-url = "http://myfootballapi.f7bqcuhbhaenayfk.eastus.azurecontainer.io:5000/predict?home_team=Ac%20Milan&away_team=atalanta%20bc"
+  curl "http://myfootballapi.f7bqcuhbhaenayfk.eastus.azurecontainer.io:5000/predict?home_team=Ac%20Milan&away_team=atalanta%20bc"
   ```
   #### **Example Response:**
   
