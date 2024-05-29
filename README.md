@@ -75,7 +75,7 @@ The data cleaning stage involves handling missing values and ensuring the integr
 ## 05. Model Training
 - We use a `RandomForestRegressor` for prediction due to its robustness and ability to handle multiple output variables efficiently when wrapped in a `MultiOutputRegressor`.
 - Hyperparameters are optimized using RandomizedSearchCV with a predefined parameter distribution and cross-validation
-- 
+
 ### Model Evaluation
   The model is evaluated using several metrics:
 - Mean Absolute Error (MAE): `1.14`
