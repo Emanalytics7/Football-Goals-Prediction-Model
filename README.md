@@ -1,5 +1,5 @@
 
-# 30 Days ML Challenge (Beakinto Data)
+# 30 Days ML Challenge (BeakInto Data)
 ---
 # Football Goals Prediction Model
 
@@ -117,7 +117,9 @@ The base URL for accessing the API is:
   #### **Example Request**:
   Using `curl` command
   ```sh
-  curl "http://footballgoalspredictionapi.f6cpcjeweuhgacfm.eastus.azurecontainer.io/predict?home_team=Ac%20Milan&away_team=atalanta%20bc"
+  curl "http:/import requests
+
+url = "http://myfootballapi.f7bqcuhbhaenayfk.eastus.azurecontainer.io:5000/predict?home_team=Ac%20Milan&away_team=atalanta%20bc"
   ```
   #### **Example Response:**
   
@@ -132,21 +134,24 @@ The base URL for accessing the API is:
   
   - **Using Python `requests` lib**
   ```python
-  import requests
-  
-  url = "http://footballgoalspredictionapi.f6cpcjeweuhgacfm.eastus.azurecontainer.io/predict"
-  params = {
-      "home_team": "Ac Milan",
-      "away_team": "atalanta bc"
-  }
-  response = requests.post(url, params=params)
-  print(response.json())
+import requests
+
+url = "http://myfootballapi.f7bqcuhbhaenayfk.eastus.azurecontainer.io:5000/predict"  
+data = {
+    "home_team": "Ac Milan",
+    "away_team": "atalanta bc"
+}
+
+response = requests.post(url, json=data)  
+print(response.json())  
+
+
   
   ```
   
   - **Using JavaScript `fetch` API**
   ```javascript
-  fetch('http://footballgoalspredictionapi.f6cpcjeweuhgacfm.eastus.azurecontainer.io/predict?home_team=Ac%20Milan&away_team=atalanta%20bc')
+  fetch('http://myfootballapi.f7bqcuhbhaenayfk.eastus.azurecontainer.io:5000/predict?home_team=Ac%20Milan&away_team=atalanta%20bc')
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
@@ -163,7 +168,7 @@ The base URL for accessing the API is:
       public static void main(String[] args) throws Exception {
           HttpClient client = HttpClient.newHttpClient();
           HttpRequest request = HttpRequest.newBuilder()
-                  .uri(URI.create("http://footballgoalspredictionapi.f6cpcjeweuhgacfm.eastus.azurecontainer.io/predict?home_team=Ac%20Milan&away_team=atalanta%20bc"))
+                  .uri(URI.create("http://myfootballapi.f7bqcuhbhaenayfk.eastus.azurecontainer.io:5000/predict?home_team=Ac%20Milan&away_team=atalanta%20bc"))
                   .build();
   
           HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
