@@ -73,7 +73,7 @@ The data cleaning stage involves handling missing values and ensuring the integr
 | ![Distribution of Away Team Scores](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/eda/teams_players.png)
 
 ## 05. Model Training
-- We use a `RandomForestRegressor` for prediction due to its robustness and ability to handle multiple output variables efficiently when wrapped in a `MultiOutputRegressor`.
+- We use the `RandomForestRegressor` for prediction due to its robustness and ability to handle multiple output variables efficiently when wrapped in a `MultiOutputRegressor`.
 - Hyperparameters are optimized using RandomizedSearchCV with a predefined parameter distribution and cross-validation
 
 ### Model Evaluation
@@ -176,5 +176,5 @@ print(response.json())
   ```
   
   ---
-😉
+
 
