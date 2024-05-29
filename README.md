@@ -58,15 +58,15 @@ The data cleaning stage involves handling missing values and ensuring the integr
 
 | Top 10 Teams with the Most Players |Home Team vs. Away Team Average Rating |
 |:---------------------------------:|:------------------------------:|
-| ![Top 10 Teams with the Most Players](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/visuals/top_10.png)| ![Number of Home vs. Away Players](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/visuals/avg_ratings.png) |
+| ![Top 10 Teams with the Most Players](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/eda/top_10.png)| ![Number of Home vs. Away Players](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/eda/avg_ratings.png) |
 
 | Top 10 Players by Frequency of Appearances | Home Team vs Away Team Scores |
 |:-----------------------------------------:|:---------------------------------:|
-| ![Top 10 Players by Frequency of Appearances](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/visuals/frequency.png) | ![Home Team Scores vs Away Team Scores](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/visuals/score.png) 
+| ![Top 10 Players by Frequency of Appearances](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/eda/frequency.png) | ![Home Team Scores vs Away Team Scores](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/eda/score.png) 
 
 | Home Team Score vs. Home Team Average Rating | Away Team Score vs. Away Team Average Rating |
 |:-------------------------------------------:|:-------------------------------------------:|
-| ![Home Team Score vs. Home Team Average Rating](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/visuals/home_avg_ratings.png) | ![Away Team Score vs. Away Team Average Rating](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/visuals/away_avg_ratings.png) |
+| ![Home Team Score vs. Home Team Average Rating](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/eda/home_avg_ratings.png) | ![Away Team Score vs. Away Team Average Rating](https://github.com/Emanalytics7/Football-Goals-Prediction-Model/blob/main/eda/away_avg_ratings.png) |
 
 | Number of Home vs Away Team Players |
 |:-------------------------------:|
