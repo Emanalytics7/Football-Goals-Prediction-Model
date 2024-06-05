@@ -9,7 +9,7 @@ This project focuses on building a predictive model to forecast the number of go
 
 ## Table of Contents
 
-1. [Data Collection](#Data-Collection)
+1. [Data Collection](###Data-Collection)
 2. [Preprocessing](#preprocessing)
 3. [Data Cleaning](#data-cleaning)
 4. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
