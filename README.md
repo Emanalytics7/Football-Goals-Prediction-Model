@@ -9,7 +9,7 @@ This project focuses on building a predictive model to forecast the number of go
 
 ## Table of Contents
 
-1. [Data Collection](#01.Data-Collection)
+1. [Data Collection](#data-collection)
 2. [Preprocessing](#preprocessing)
 3. [Data Cleaning](#data-cleaning)
 4. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
@@ -18,7 +18,7 @@ This project focuses on building a predictive model to forecast the number of go
 7. [Dockerization](#dockerization)
 8. [Deployment on Azure](#deployment-on-azure)
 
-## 01. Data Collection
+## [01. Data Collection](#data-collection)
 
 ### Source
 Data was collected using Scrapy from [Transfermarkt](https://www.transfermarkt.com/).
