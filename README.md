@@ -18,7 +18,7 @@ This project focuses on building a predictive model to forecast the number of go
 7. [Dockerization](#dockerization)
 8. [Deployment on Azure](#deployment-on-azure)
 
-## [01. Data Collection](#data-collection)
+### 01. Data Collection
 
 ### Source
 Data was collected using Scrapy from [Transfermarkt](https://www.transfermarkt.com/).
